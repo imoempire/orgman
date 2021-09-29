@@ -1,5 +1,6 @@
 import React from 'react';
 import { SideBarData } from './SideBarData';
+import { NavLink } from 'react-router-dom';
 
 
 const SideBar = () => {
@@ -9,7 +10,9 @@ const SideBar = () => {
            {SideBarData.map((tab, key)=>{
                 return (
                 <li key={key}>
-                    <div>{tab.Tab}</div>
+                    <NavLink to={tab.Link}>
+                        <div>{tab.Tab}</div>
+                    </NavLink>
                 </li>
                 )
                 
