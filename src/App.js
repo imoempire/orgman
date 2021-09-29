@@ -1,14 +1,11 @@
 import './App.css';
-import Navbar from './Components/Navbar/Navbar';
-import SideBar from './Components/SideBar/SideBar';
+import router from './Router/router'
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <SideBar />
+      <router/>
       <h1>Testing App</h1>
-
     </div>
   );
 }
