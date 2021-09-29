@@ -1,9 +1,8 @@
-import React from 'react';
 
 export const SideBarData = [
     {
         Tab: "Home",
-        Link: "/Home"
+        Link: "/"
     },
     {
         Tab: "Manage",
