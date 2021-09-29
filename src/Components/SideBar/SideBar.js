@@ -30,6 +30,7 @@ const SideBar = () => {
                 </p>
                 <ul class="menu-list">
                     <li><NavLink to="/meet">Notes</NavLink></li>
+                    <li><NavLink to="/meet">Meetings</NavLink></li>
                 </ul>
             </aside>
         </>
