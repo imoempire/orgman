@@ -1,24 +1,39 @@
 import React from 'react';
-import { SideBarData } from './SideBarData';
 import { NavLink } from 'react-router-dom';
 
 
 const SideBar = () => {
     return (
-        <div className="sidebar">
-           <ul>
-           {SideBarData.map((tab, key)=>{
-                return (
-                <li key={key}>
-                    <NavLink to={tab.Link}>
-                        <div>{tab.Tab}</div>
-                    </NavLink>
-                </li>
-                )
-                
-            })}
-           </ul>
-        </div>
+        
+        <>
+            <aside class="menu">
+                <p class="menu-label">
+                    General
+                </p>
+                <ul class="menu-list">
+                    <li><NavLink to="/">Home</NavLink></li>
+                </ul>
+                <p class="menu-label">
+                    DASHBOARD
+                </p>
+                <ul class="menu-list">
+                    <li>
+                        <a class="is-active has-background-primary">Manage Your Team</a>
+                        <ul>
+                            <li><a>Members</a></li>
+                            <li><a>Add a member</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <p class="menu-label">
+                    Record
+                </p>
+                <ul class="menu-list">
+                    <li><NavLink to="/meet">Notes</NavLink></li>
+                </ul>
+            </aside>
+        </>
+        
     );
 }
 
