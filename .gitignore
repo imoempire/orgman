@@ -27,3 +27,4 @@ yarn-debug.log*
 yarn-error.log*
 
 src/Components/SideBar/SideBarData.js
+src/Components/InnerBar.js
