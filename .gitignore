@@ -5,6 +5,11 @@
 /.pnp
 .pnp.js
 
+
+# DATA
+SideBarData.js
+
+
 # testing
 /coverage
 
