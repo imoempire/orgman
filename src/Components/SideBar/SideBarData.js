@@ -10,7 +10,7 @@ export const SideBarData = [
     },
     {
         Tab: "To-do",
-        Link: "/todo"
+        Link: "/todo-List"
     },
     {
         Tab: "Note",
