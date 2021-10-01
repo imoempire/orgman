@@ -29,6 +29,9 @@
 .menu-list a{
     color: white;
 }
+.menu-list:hover{
+    background-color: white;
+}
 .menu p{
     padding: 20px 0;
     color: white;
