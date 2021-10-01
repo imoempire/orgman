@@ -1,8 +1,5 @@
 import './App.css';
-import Navbar from './Components/Navbar/Navbar';
 import SideBar from './Components/SideBar/SideBar';
-// import Org from './Org';
-// import Router from './Router/Router'
 
 
 function App() {

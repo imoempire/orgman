@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 
 const SideBar = () => {
+
     return (
         
         <>
@@ -11,7 +12,7 @@ const SideBar = () => {
                     General
                 </p>
                 <ul class="menu-list">
-                    <li><NavLink to="/">Home</NavLink></li>
+                    <li><NavLink  to="/" >Home</NavLink></li>
                 </ul>
                 <p class="menu-label">
                     DASHBOARD

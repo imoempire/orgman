@@ -1,25 +1,31 @@
-import { ADD_LIST, DELETE_LIST } from "../Action/appActions";
+import { ADD_LIST, DELETE_LIST, EDIT_LIST } from "../Action/appActions";
 
 const initialState ={
-    Todos: [
-       { list: 'clean car'}
+    Todo: [
+       { list: 'clean car',
+        id: '4567ioewjh2367'}
     ]
 }
 
-const appReducer = ( state= initialState, action)=>{
+const appReducer = ( state=initialState, action)=>{
     switch(action.type){
         
         // Add list code
         case ADD_LIST :
-            return {...state.Todos, Todos: [...state.Todos, action.payload] }
+            return {...state.Todo, Todo: [...state.Todo, action.payload] }
        
             // Delete List code
         case DELETE_LIST:
-            const SavedLists = state.Todos.filter((todo)=>{
+            const SavedLists = state.Todo.filter((todo)=>{
                 return todo.id !== action.payload;
             });
-            return {...state, Todos: SavedLists }
+            return {...state, Todo: SavedLists }
         
+        case EDIT_LIST:
+            return{...state, Todo: state.Todo.map((todo)=>
+                todo.id === action.payload.id ? action.payload : todo 
+                )}
+
         default:
             return state
     }

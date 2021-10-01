@@ -19,7 +19,7 @@ class TodoAdd extends Component {
 
   handlSubmit = (e) => {
     e.preventDefault();
-
+    this.props.addList(this.state);
     this.setState({
       list: "",
     });
@@ -28,19 +28,19 @@ class TodoAdd extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handlSubmit}>
+        <form onSubmit={this.handlSubmit} style={{marginBottom: "20px"}}>
           <div class="field">
-            <label class="label">Label</label>
+            <label class="label">Add a TODO-LIST</label>
             <div class="control">
-              <input
+              <input style={{width: "50%"}}
                 class="input"
                 type="text"
+                name="list"
                 placeholder="Add Todo"
                 onChange={this.handlChange}
                 value={this.state.list}
               />
             </div>
-            <p class="help">This is a help text</p>
           </div>
           <div className="field is-grouped">
             <div className="control">
@@ -49,13 +49,7 @@ class TodoAdd extends Component {
                 type="submit"
                 className="button is-link"
               >
-                Submit
-              </button>
-            </div>
-            <div className="control">
-              <button onClick={this.handleGoBack}
-                className="button is-link is-light">
-                Cancel
+                Add
               </button>
             </div>
           </div>
