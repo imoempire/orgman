@@ -18,7 +18,7 @@ const Todos = ({ Todo, deleteList, editList }) => {
           <p class="card-header-title">{Todo.list}</p>
         </header>
         <footer class="card-footer">
-          <button class="card-footer-item button is-danger" onClick={deletehandle}>Delete</button>
+          <button class="card-footer-item button is-danger" onClick={deletehandle}>Check</button>
           <button class="card-footer-item button is-warning" onClick={handleShow}>Edit</button>
         </footer>
       </div>
