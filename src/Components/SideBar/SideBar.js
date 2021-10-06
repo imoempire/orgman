@@ -9,10 +9,10 @@ const SideBar = () => {
         <>
             <aside class="menu">
                 <p class="menu-label">
-                    General
+                    HOME
                 </p>
                 <ul class="menu-list">
-                    <li><NavLink  to="/" >Home</NavLink></li>
+                    <li><NavLink  to="/" >List-Note</NavLink></li>
                 </ul>
                 <p class="menu-label">
                     DASHBOARD
@@ -21,16 +21,10 @@ const SideBar = () => {
                     <li>
                         <a class="is-active has-background-primary">Manage Your Team</a>
                         <ul>
-                            <li><a>Members</a></li>
-                            <li><a>Add a member</a></li>
+                            <li><NavLink to='/member'>Members</NavLink></li>
+                            <li><NavLink to='/members'>Add a member</NavLink></li>
                         </ul>
                     </li>
-                </ul>
-                <p class="menu-label">
-                    Record
-                </p>
-                <ul class="menu-list">
-                    <li><NavLink to="/note">Notes</NavLink></li>
                 </ul>
             </aside>
         </>
