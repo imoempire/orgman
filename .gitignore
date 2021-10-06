@@ -25,6 +25,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+<<<<<<< HEAD
+=======
 
 src/Components/SideBar/SideBarData.js
+>>>>>>> eaabe2ec6d59b8c3ef5e844fb7c5a6b46c314584
 src/Components/InnerBar.js
