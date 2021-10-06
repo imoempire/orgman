@@ -1,12 +1,8 @@
-import { ADD_LIST, DELETE_LIST, EDIT_LIST } from "../Action/appActions";
+import { ADD_LIST, DELETE_LIST, EDIT_LIST, SET_ALL_TOTE } from "../Action/appActions";
 
 
 const initialState ={
-    Todo: [
-       { list: 'clean car',
-         note: 'wqefe',
-         id: '4567ioewjh2367'}
-    ],
+    Todo: [ ],
 }
 
 const appReducer = ( state=initialState, action)=>{
@@ -27,7 +23,8 @@ const appReducer = ( state=initialState, action)=>{
             return{...state, Todo: state.Todo.map((todo)=>
                 todo.id === action.payload.id ? action.payload : todo 
                 )}
-
+        case SET_ALL_TOTE:
+            return{...state, Todo: action.payload}
         default:
             return state
     }

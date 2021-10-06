@@ -1,14 +1,7 @@
-import { ADD_MEMBER, DELETE_MEMBER, EDIT_MEMBER } from "../Action/memberActions";
+import { ADD_MEMBER, DELETE_MEMBER, EDIT_MEMBER, SET_ALL_MEMBERS } from "../Action/memberActions";
 
 const initialState ={
-    Member: [
-       { 
-        name: 'Let the dogs go',
-        Phone: '234567890',
-        email: 'imo@gmail.com',
-        id: '4567ioewj3456h2367',
-        }
-    ]
+    Member: [  ]
 }
 
 const memberReducer = ( state=initialState, action)=>{
@@ -30,6 +23,8 @@ const memberReducer = ( state=initialState, action)=>{
             return{...state, Member: state.Member.map((member)=>
                 member.id === action.payload.id ? action.payload : member 
                 )}
+        case SET_ALL_MEMBERS: 
+                return{...state, Member: action.payload}
 
         default:
             return state

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { addMember } from "../../Action/memberActions";
+import { addMember, getAllMembers } from "../../Action/memberActions";
 
 class AddMember extends Component {
   constructor(props) {
@@ -27,7 +27,9 @@ class AddMember extends Component {
       Phone: '',
       email: ''    });
   };
-
+  componentDidMount(){
+    this.props.getAllMember()
+  }
   render() {
     return (
       <div>
@@ -93,6 +95,7 @@ class AddMember extends Component {
 
 const mapDispatchToProps = {
   addMember: addMember,
+  getAllMember: getAllMembers
 };
 
 export default connect(null, mapDispatchToProps)(AddMember);

@@ -14,41 +14,33 @@ const Member = ({ member, deleteMember, editMember }) => {
   return (
     <>
 
-<div className="card">
-      <header className="card-header">
-        <p className="card-header-title has-text-danger">
-           Member Info
-        </p>
-      </header>
-      <div className="card-content">
-        <div className="content" style={{height: '110px'}}>
-          <table className="table is-striped is-hoverable">
-            <tbody>
-              <tr>
-                <th>Name</th>
-                <td>{member.name}</td>
-              </tr>
-              <tr>
-                <th>Phone</th>
-                <td>{member.Phone}</td>
-              </tr>
-              <tr>
-                <th>Email</th>
-                <td>{member.email}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <footer className="card-footer">
-        <button onClick={handleShow} className="card-footer-item">
+    <table class="table" style={{ marginLeft: '20px'}}>
+  <thead>
+    <h1 style={{fontSize: '20px', fontWeight: '900'}}>Member</h1>
+    <tr>
+      <th><h1 style={{fontWeight: '900'}} title="Position">Name</h1></th>
+      <th><h1 style={{fontWeight: '900'}} title="Played">Phone</h1></th>
+      <th><h1 style={{fontWeight: '900'}} title="Won">Email</h1></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <th>{member.name}</th>
+      <td>{member.Phone}</td>
+      <td>{member.email}</td>
+    </tr>   
+  </tbody>
+  <footer className="card-footer">
+        <button onClick={handleShow} className="card-footer-item button is-warning">
           Edit
         </button>
-        <button onClick={deletehandle} className="card-footer-item">
+        <button onClick={deletehandle} className="card-footer-item button is-danger">
           Delete
         </button>
-      </footer>
-    </div>
+    </footer>
+
+</table>
 
       {/* Modal */}
       <div>

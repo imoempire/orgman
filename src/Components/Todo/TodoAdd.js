@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { addList } from "../../Action/appActions";
+import { addList, getAllTotes } from "../../Action/appActions";
 
 class TodoAdd extends Component {
   constructor(props) {
@@ -26,7 +26,9 @@ class TodoAdd extends Component {
       note: ""
     });
   };
-
+  componentDidMount(){
+    this.props.getAllTotes()
+  }
   render() {
     return (
       <div>
@@ -74,7 +76,8 @@ class TodoAdd extends Component {
 
 
 const mapDispatchToProps={
-    addList: addList
+    addList: addList,
+    getAllTotes: getAllTotes
 }
 
 export default connect(null, mapDispatchToProps)(TodoAdd);
