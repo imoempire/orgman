@@ -4,7 +4,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Navbar from '../Components/Navbar/Navbar';
 import App from '../App';
 import TodoLists from '../Components/Todo/TodoLists';
-import NotesLists from '../Components/Notes/NoteLists';
+import MemberApp from '../Components/Notes/MemberApp';
+import MemberList from '../Components/Notes/MemberList';
 
 
 const router = () => {
@@ -27,7 +28,8 @@ const router = () => {
           <div className="nav">
             <Switch>
                 <Route exact path="/" component={TodoLists} />
-                <Route exact path="/note" component={NotesLists} />
+                <Route exact path="/members" component={MemberApp} />
+                <Route exact path="/member" component={MemberList} />
             </Switch>
           </div>
           </div>
