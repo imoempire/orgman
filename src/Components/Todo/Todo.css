@@ -1,0 +1,6 @@
+.modal {
+  background-color: rgb(255, 255, 255);
+  margin-top: 100px;
+  border-radius: 8px;
+  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%)
+}
