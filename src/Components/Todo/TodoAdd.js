@@ -7,6 +7,7 @@ class TodoAdd extends Component {
     super(props);
     this.state = {
       list: "",
+      note: ""
     };
   }
 
@@ -22,6 +23,7 @@ class TodoAdd extends Component {
     this.props.addList(this.state);
     this.setState({
       list: "",
+      note: ""
     });
   };
 
@@ -30,7 +32,7 @@ class TodoAdd extends Component {
       <div>
         <form onSubmit={this.handlSubmit} style={{marginBottom: "20px"}}>
           <div class="field">
-            <label class="label">Add a TODO-LIST</label>
+            <label class="label">Add a TODO-LIST & Note</label>
             <div class="control">
               <input style={{width: "50%"}}
                 class="input"
@@ -39,6 +41,17 @@ class TodoAdd extends Component {
                 placeholder="Add Todo"
                 onChange={this.handlChange}
                 value={this.state.list}
+              />
+            </div>
+            <div class="control">
+              <input
+                style={{ width: "50%", padding: "40px" }}
+                class="input"
+                type="text"
+                name="note"
+                placeholder="Create Note"
+                onChange={this.handlChange}
+                value={this.state.note}
               />
             </div>
           </div>

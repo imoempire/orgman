@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { editList } from "../../Action/appActions";
-import './Todo.css';
 
 class TodoEdit extends Component {
   constructor(props) {
     super(props);
     this.state = {
       list: props.todo.list || "",
+      note: props.todo.note || "",
       id: props.todo.id || "",
     }
   }
@@ -22,6 +22,7 @@ class TodoEdit extends Component {
     this.props.editList(this.state);
     this.setState({
       list: "",
+      note: ''
     });
     this.props.closeModal();
   };
@@ -37,6 +38,14 @@ class TodoEdit extends Component {
                 type="text"
                 onChange={this.handlChange}
                 value={this.state.list}
+              />
+            </div>
+            <div class="control">
+              <input class="input"
+                name="note"
+                type="text"
+                onChange={this.handlChange}
+                value={this.state.note}
               />
             </div>
           </div>
