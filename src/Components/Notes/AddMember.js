@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { addMember, getAllMembers } from "../../Action/memberActions";
+import { NavLink } from 'react-router-dom';
 
 class AddMember extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: '',
-      Phone: '',
-      email: ''
+      name: "",
+      Phone: "",
+      email: "",
     };
   }
 
@@ -23,16 +24,21 @@ class AddMember extends Component {
     e.preventDefault();
     this.props.addMember(this.state);
     this.setState({
-      name: '',
-      Phone: '',
-      email: ''    });
+      name: "",
+      Phone: "",
+      email: "",
+    });
   };
-  componentDidMount(){
-    this.props.getAllMember()
+  componentDidMount() {
+    this.props.getAllMember();
   }
   render() {
     return (
       <div>
+        <button className="button is-success">
+          <NavLink to="/member"> See All Members</NavLink>
+        </button>
+
         <form onSubmit={this.handlSubmit} style={{ marginBottom: "20px" }}>
           <div class="field">
             <label class="label">Name</label>
@@ -95,7 +101,7 @@ class AddMember extends Component {
 
 const mapDispatchToProps = {
   addMember: addMember,
-  getAllMember: getAllMembers
+  getAllMember: getAllMembers,
 };
 
 export default connect(null, mapDispatchToProps)(AddMember);
