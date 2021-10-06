@@ -9,31 +9,6 @@ const Navbar = () => {
           <a class="navbar-item">
             <img src={logo} width="100" height="600" />
           </a>
-
-          <a
-            role="button"
-            class="navbar-burger"
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarBasicExample"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                <a class="button up">
-                  <strong>Sign up</strong>
-                </a>
-                <a class="button is-light">Log in</a>
-              </div>
-            </div>
-          </div>
         </div>
       </nav>
     </div>
