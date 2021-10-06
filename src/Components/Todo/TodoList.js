@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Todos from './Todos';
+import Todos from './Todos'
+
 
 const TodoList = ({Todo, deleteList, editList}) => {
     const TodoLists = Todo.map((todo)=>{
@@ -29,7 +30,7 @@ const TodoList = ({Todo, deleteList, editList}) => {
 
 const mapStateToProps=(state)=>{
     return{
-        Todo: state.Todo
+        Todo: state.todo.Todo
     }
 }
 export default connect(mapStateToProps)(TodoList);
